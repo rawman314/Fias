@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <schemas>
+
+    <!-- Проверено -->
+    <schema name="actstat" xmlElement="ActualStatus">
+      <field name="actstatid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="addrobj" xmlElement="Object" big="true">
+      <field name="aoguid" type="guid"/>
+      <field name="formalname" type="string" max="120"/>
+      <field name="regioncode" type="int" index="true"/>
+      <field name="autocode" type="int" index="true"/>
+      <field name="areacode" type="int" index="true"/>
+      <field name="citycode" type="int" index="true"/>
+      <field name="ctarcode" type="int" index="true"/>
+      <field name="placecode" type="int" index="true"/>
+      <field name="streetcode" type="int" index="true"/>
+      <field name="extrcode" type="int" index="true"/>
+      <field name="sextcode" type="int" index="true"/>
+      <field name="offname" type="string" max="120" />
+      <field name="postalcode" type="string" max="6" />
+      <field name="ifnsfl" type="int" />
+      <field name="terrifnsfl" type="int" />
+      <field name="ifnsul" type="int" />
+      <field name="terrifnsul" type="int" />
+      <field name="okato" type="string" max="11" />
+      <field name="oktmo" type="string" max="8"/>
+      <field name="updatedate" type="date" />
+      <field name="shortname" type="string" max="10" index="true"/>
+      <field name="aolevel" type="int" index="true"/>
+      <field name="parentguid" type="guid" />
+      <field name="aoid" type="guid" primary="true" />
+      <field name="previd" type="guid" />
+      <field name="nextid" type="guid" />
+      <field name="code" type="string" max="17" />
+      <field name="plaincode" type="string" max="15" index="true"/>
+      <field name="actstatus" type="bool" index="true"/>
+      <field name="centstatus" type="bool" />
+      <field name="operstatus" type="int" />
+      <field name="currstatus" type="int" />
+      <field name="startdate" type="date" />
+      <field name="enddate" type="date" />
+      <field name="normdoc" type="guid" />
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="centerst" xmlElement="CenterStatus">
+      <field name="centerstid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="curentst" xmlElement="CurrentStatus">
+      <field name="curentstid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="eststat" xmlElement="EstateStatus">
+      <field name="eststatid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+      <field name="shortname" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="house" xmlElement="House" big="true" skip="true">
+      <field name="postalcode" type="string"/>
+      <field name="ifnsfl" type="int"/>
+      <field name="terrifnsfl" type="int"/>
+      <field name="ifnsul" type="int"/>
+      <field name="terrifnsul" type="int"/>
+      <field name="okato" type="string"/>
+      <field name="oktmo" type="string"/>
+      <field name="updatedate" type="date"/>
+      <field name="housenum" type="string"/>
+      <field name="eststatus" type="int"/>
+      <field name="buildnum" type="string"/>
+      <field name="strucnum" type="string"/>
+      <field name="strstatus" type="int"/>
+      <field name="houseid" type="guid" primary="true"/>
+      <field name="houseguid" type="guid"/>
+      <field name="aoguid" type="guid"/>
+      <field name="startdate" type="date"/>
+      <field name="enddate" type="date"/>
+      <field name="statstatus" type="int"/>
+      <field name="normdoc" type="guid"/>
+      <field name="counter" type="int"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="houseint" xmlElement="HouseInterval" big="true" skip="true">
+      <field name="postalcode" type ="string"/>
+      <field name="ifnsfl" type ="int"/>
+      <field name="terrifnsfl" type ="int"/>
+      <field name="okato" type ="string"/>
+      <field name="oktmo" type ="string"/>
+      <field name="updatedate" type ="date"/>
+      <field name="intstart" type ="int"/>
+      <field name="intend" type ="int"/>
+      <field name="houseintid" type ="guid" primary="true"/>
+      <field name="intguid" type ="guid"/>
+      <field name="aoguid" type ="guid"/>
+      <field name="startdate" type ="date"/>
+      <field name="enddate" type ="date"/>
+      <field name="intstatus" type ="int"/>
+      <field name="normdoc" type ="guid"/>
+      <field name="counter" type ="int"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="hststat" xmlElement="HouseStateStatus">
+      <field name="housestid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="intvstat" xmlElement="IntervalStatus">
+      <field name="intvstatid" type="int" primary="true"/>
+      <field name="name" type="string"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="landmark" xmlElement="Landmark">
+      <field name="location" type="string"/>
+      <field name="postalcode" type="string"/>
+      <field name="ifnsfl" type="int"/>
+      <field name="terrifnsfl" type="int"/>
+      <field name="ifnsul" type="int"/>
+      <field name="terrifnsul" type="int"/>
+      <field name="okato" type="string"/>
+      <field name="oktmo" type="string"/>
+      <field name="updatedate" type="date"/>
+      <field name="landid" type="guid" primary="true"/>
+      <field name="landguid" type="guid"/>
+      <field name="aoguid" type="guid"/>
+      <field name="startdate" type="date"/>
+      <field name="enddate" type="date"/>
+      <field name="normdoc" type="guid"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="normdoc"  xmlElement="NormativeDocument" big="true" skip="true">
+      <field name="normdocid" type="guid" primary="true"/>
+      <field name="docname" type="string"/>
+      <field name="docdate" type="date"/>
+      <field name="docnum" type="string"/>
+      <field name="doctype" type="int"/>
+      <field name="docimgid" type="int"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="operstat" xmlElement="OperationStatus">
+      <field name="operstatid" type="int" primary="true"/>
+      <field name="name" type="string" />
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="socrbase" xmlElement="AddressObjectType">
+      <field name="level" type="int"/>
+      <field name="scname" type="string"/>
+      <field name="socrname" type="string"/>
+      <field name="kod_t_st" type="int" primary="true"/>
+    </schema>
+
+    <!-- Проверено -->
+    <schema name="strstat" xmlElement="StructureStatus">
+      <field name="strstatid" type="int" primary="true"/>
+      <field name="name" type="string" />
+      <field name="shortname" type="string" />
+    </schema>
+  </schemas>
+</root>

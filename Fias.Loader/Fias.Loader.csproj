@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5E2FFFA-F60D-4621-95E4-C826DCA8AF59}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fias.Loader</RootNamespace>
+    <AssemblyName>Fias.Loader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SchemaEntities\SchemaCollection.cs" />
+    <Compile Include="SchemaEntities\TypeConfig.cs" />
+    <Compile Include="SchemaEntities\Field.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SchemaEntities\Schema.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Schemas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_ACTSTAT_2_250_08_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_ADDROBJ_2_250_01_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_CENTERST_2_250_10_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_CURENTST_2_250_07_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_ESTSTAT_2_250_13_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_HOUSEINT_2_250_03_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_HOUSE_2_250_02_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_HSTSTAT_2_250_12_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_INTVSTAT_2_250_11_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_LANDMARK_2_250_04_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_NORMDOC_2_250_05_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_OPERSTAT_2_250_09_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_SOCRBASE_2_250_06_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_STRSTAT_2_250_14_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Schemas.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

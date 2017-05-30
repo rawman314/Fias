@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="schemas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="schema" type="schema"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="schema">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="field" type="field" />
+    </xs:sequence>
+    
+    <xs:attribute name="name" type="xs:string" use="required" >
+      <xs:annotation>
+        <xs:documentation></xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="xmlElement" type="xs:string" use="required" >
+      <xs:annotation>
+        <xs:documentation>Имя XML-элемента, которое хранит непостредственно данные записи</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="skip" type="xs:boolean" use="optional" >
+      <xs:annotation>
+        <xs:documentation>Признак того, что эту таблицу можно пропустить, не импортировать. Служит для отладочных целей.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="big" type="xs:boolean" use="optional" >
+      <xs:annotation>
+        <xs:documentation>Признак того, что таблица является очень большой и, как следствие, пересоздавать её очень дорого. Такие таблицы долняются недостающими данными.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="limit" type="xs:int" use="optional" >
+      <xs:annotation>
+        <xs:documentation>Ограничение на кол-во импортируемых строк. Служит для отладочных целей.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name ="field">
+    <xs:attribute name="name" type="xs:string" use="required" >
+      <xs:annotation>
+        <xs:documentation>Имя поля</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="index" type="xs:boolean" use="optional" >
+      <xs:annotation>
+        <xs:documentation>Признак того, что по полю нужно построить индекс для ускорения поиска</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="type"  use="required" type="dataTypes" >
+      <xs:annotation>
+        <xs:documentation>Тип хранящегося в поле значения</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    
+    <xs:attribute name="max"  use="optional" type="xs:int" >
+      <xs:annotation>
+        <xs:documentation>Максимальная длина строки. Используется только для строковых полей.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+
+    <xs:attribute name="primary" type="xs:boolean" use="optional" >
+      <xs:annotation>
+        <xs:documentation>Признак того, что поле является первичным ключем. Должно быть только одно.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="dataTypes">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="int">
+        <xs:annotation>
+          <xs:documentation>Целое значение</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="string">
+        <xs:annotation>
+          <xs:documentation>Строка любой длины</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="date">
+        <xs:annotation>
+          <xs:documentation>Дата</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="guid">
+        <xs:annotation>
+          <xs:documentation>Идентификатор типа GUID</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bool">
+        <xs:annotation>
+          <xs:documentation>Логическое значение</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
