@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="NormativeDocumentes">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией по сведениям по нормативным документам, являющимся основанием присвоения адресному элементу наименования в БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ СЃРІРµРґРµРЅРёСЏРј РїРѕ РЅРѕСЂРјР°С‚РёРІРЅС‹Рј РґРѕРєСѓРјРµРЅС‚Р°Рј, СЏРІР»СЏСЋС‰РёРјСЃСЏ РѕСЃРЅРѕРІР°РЅРёРµРј РїСЂРёСЃРІРѕРµРЅРёСЏ Р°РґСЂРµСЃРЅРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ РІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="NormativeDocument" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Сведения по нормативному документу, являющемуся основанием присвоения адресному элементу наименования</xs:documentation>
+						<xs:documentation>РЎРІРµРґРµРЅРёСЏ РїРѕ РЅРѕСЂРјР°С‚РёРІРЅРѕРјСѓ РґРѕРєСѓРјРµРЅС‚Сѓ, СЏРІР»СЏСЋС‰РµРјСѓСЃСЏ РѕСЃРЅРѕРІР°РЅРёРµРј РїСЂРёСЃРІРѕРµРЅРёСЏ Р°РґСЂРµСЃРЅРѕРјСѓ СЌР»РµРјРµРЅС‚Сѓ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="NORMDOCID" use="required">
 							<xs:annotation>
-								<xs:documentation>Идентификатор нормативного документа</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅРѕСЂРјР°С‚РёРІРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -23,7 +24,7 @@
 						</xs:attribute>
 						<xs:attribute name="DOCNAME" use="optional">
 							<xs:annotation>
-								<xs:documentation>Наименование документа</xs:documentation>
+								<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -31,14 +32,14 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="DOCDATE" type="xs:dateTime" use="optional">
+						<xs:attribute name="DOCDATE" type="xs:date" use="optional">
 							<xs:annotation>
-								<xs:documentation>Дата документа</xs:documentation>
+								<xs:documentation>Р”Р°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
 						<xs:attribute name="DOCNUM" use="optional">
 							<xs:annotation>
-								<xs:documentation>Номер документа</xs:documentation>
+								<xs:documentation>РќРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -49,7 +50,7 @@
 						</xs:attribute>
 						<xs:attribute name="DOCTYPE" use="required">
 							<xs:annotation>
-								<xs:documentation>Тип документа</xs:documentation>
+								<xs:documentation>РўРёРї РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -59,11 +60,11 @@
 						</xs:attribute>
 						<xs:attribute name="DOCIMGID" use="optional">
 							<xs:annotation>
-								<xs:documentation>Идентификатор образа (внешний ключ)</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЂР°Р·Р° (РІРЅРµС€РЅРёР№ РєР»СЋС‡)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
-								<xs:restriction base="xs:integer">
-									<xs:totalDigits value="10"/>
+								<xs:restriction base="xs:string">
+									<xs:length value="36"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

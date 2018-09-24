@@ -1,0 +1,7 @@
+D:\Work\ФИАС\fias\fias\Fias.Loader\bin\Debug\Schemas.xml
+D:\Work\ФИАС\fias\fias\Fias.Loader\bin\Debug\Fias.Loader.exe.config
+D:\Work\ФИАС\fias\fias\Fias.Loader\bin\Debug\Fias.Loader.exe
+D:\Work\ФИАС\fias\fias\Fias.Loader\bin\Debug\Fias.Loader.pdb
+D:\Work\ФИАС\fias\fias\Fias.Loader\obj\x86\Debug\Fias.Loader.csproj.CoreCompileInputs.cache
+D:\Work\ФИАС\fias\fias\Fias.Loader\obj\x86\Debug\Fias.Loader.exe
+D:\Work\ФИАС\fias\fias\Fias.Loader\obj\x86\Debug\Fias.Loader.pdb

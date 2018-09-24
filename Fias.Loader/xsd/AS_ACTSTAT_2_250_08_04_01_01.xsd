@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="ActualStatuses">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией по статусу актуальности в БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ СЃС‚Р°С‚СѓСЃСѓ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="ActualStatus" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Статус актуальности ФИАС</xs:documentation>
+						<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё Р¤РРђРЎ</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="ACTSTATID" use="required">
 							<xs:annotation>
-								<xs:documentation>Идентификатор статуса (ключ)</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚Р°С‚СѓСЃР° (РєР»СЋС‡)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -23,9 +23,9 @@
 						</xs:attribute>
 						<xs:attribute name="NAME" use="required">
 							<xs:annotation>
-								<xs:documentation>Наименование
-0 – Не актуальный
-1 – Актуальный (последняя запись по адресному объекту)
+								<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ
+0 вЂ“ РќРµ Р°РєС‚СѓР°Р»СЊРЅС‹Р№
+1 вЂ“ РђРєС‚СѓР°Р»СЊРЅС‹Р№ (РїРѕСЃР»РµРґРЅСЏСЏ Р·Р°РїРёСЃСЊ РїРѕ Р°РґСЂРµСЃРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ)
 </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>

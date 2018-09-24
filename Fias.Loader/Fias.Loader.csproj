@@ -80,6 +80,9 @@
     <None Include="xsd\AS_ESTSTAT_2_250_13_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="xsd\AS_FLATTYPE_2_250_23_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="xsd\AS_HOUSEINT_2_250_03_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -95,13 +98,25 @@
     <None Include="xsd\AS_LANDMARK_2_250_04_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="xsd\AS_NDOCTYPE_2_250_20_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="xsd\AS_NORMDOC_2_250_05_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="xsd\AS_OPERSTAT_2_250_09_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="xsd\AS_ROOMTYPE_2_250_24_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_ROOM_2_250_21_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="xsd\AS_SOCRBASE_2_250_06_04_01_01.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="xsd\AS_STEAD_2_250_22_04_01_01.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="xsd\AS_STRSTAT_2_250_14_04_01_01.xsd">

@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="CurrentStatuses">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией по статусу актуальности КЛАДР 4.0 в БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ СЃС‚Р°С‚СѓСЃСѓ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РљР›РђР”Р  4.0 РІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="CurrentStatus" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Статус актуальности КЛАДР 4.0</xs:documentation>
+						<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РљР›РђР”Р  4.0</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="CURENTSTID" use="required">
 							<xs:annotation>
-								<xs:documentation>Идентификатор статуса (ключ)</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚Р°С‚СѓСЃР° (РєР»СЋС‡)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -23,7 +23,7 @@
 						</xs:attribute>
 						<xs:attribute name="NAME" use="required">
 							<xs:annotation>
-								<xs:documentation>Наименование (0 - актуальный, 1-50, 2-98 – исторический (кроме 51), 51 - переподчиненный, 99 - несуществующий)</xs:documentation>
+								<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ (0 - Р°РєС‚СѓР°Р»СЊРЅС‹Р№, 1-50, 2-98 вЂ“ РёСЃС‚РѕСЂРёС‡РµСЃРєРёР№ (РєСЂРѕРјРµ 51), 51 - РїРµСЂРµРїРѕРґС‡РёРЅРµРЅРЅС‹Р№, 99 - РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">

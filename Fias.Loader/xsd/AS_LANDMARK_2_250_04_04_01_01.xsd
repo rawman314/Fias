@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Р‘СѓСЂР°РІС†РµРІ_Рђ (EMBRACE) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="Landmarks">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией по описанию мест расположения  имущественных объектов в БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ РѕРїРёСЃР°РЅРёСЋ РјРµСЃС‚ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ  РёРјСѓС‰РµСЃС‚РІРµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ РІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Landmark" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Описание мест расположения  имущественных объектов</xs:documentation>
+						<xs:documentation>РћРїРёСЃР°РЅРёРµ РјРµСЃС‚ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ  РёРјСѓС‰РµСЃС‚РІРµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="LOCATION" use="required">
 							<xs:annotation>
-								<xs:documentation>Месторасположение ориентира</xs:documentation>
+								<xs:documentation>РњРµСЃС‚РѕСЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РѕСЂРёРµРЅС‚РёСЂР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -24,7 +25,7 @@
 						</xs:attribute>
 						<xs:attribute name="POSTALCODE" use="optional">
 							<xs:annotation>
-								<xs:documentation>Почтовый индекс</xs:documentation>
+								<xs:documentation>РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -34,7 +35,7 @@
 						</xs:attribute>
 						<xs:attribute name="IFNSFL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код ИФНС ФЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ РР¤РќРЎ Р¤Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -44,7 +45,7 @@
 						</xs:attribute>
 						<xs:attribute name="TERRIFNSFL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код территориального участка ИФНС ФЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅРѕРіРѕ СѓС‡Р°СЃС‚РєР° РР¤РќРЎ Р¤Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -54,7 +55,7 @@
 						</xs:attribute>
 						<xs:attribute name="IFNSUL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код ИФНС ЮЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ РР¤РќРЎ Р®Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -64,7 +65,7 @@
 						</xs:attribute>
 						<xs:attribute name="TERRIFNSUL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код территориального участка ИФНС ЮЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅРѕРіРѕ СѓС‡Р°СЃС‚РєР° РР¤РќРЎ Р®Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -88,18 +89,19 @@
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:length value="8"/>
+									<xs:minLength value="8"/>
+									<xs:maxLength value="11"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="UPDATEDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="UPDATEDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Дата  внесения записи</xs:documentation>
+								<xs:documentation>Р”Р°С‚Р°  РІРЅРµСЃРµРЅРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
 						<xs:attribute name="LANDID" use="required">
 							<xs:annotation>
-								<xs:documentation>Уникальный идентификатор записи ориентира</xs:documentation>
+								<xs:documentation>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё РѕСЂРёРµРЅС‚РёСЂР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -109,7 +111,7 @@
 						</xs:attribute>
 						<xs:attribute name="LANDGUID" use="required">
 							<xs:annotation>
-								<xs:documentation>Глобальный уникальный идентификатор ориентира</xs:documentation>
+								<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕСЂРёРµРЅС‚РёСЂР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -119,7 +121,7 @@
 						</xs:attribute>
 						<xs:attribute name="AOGUID" use="required">
 							<xs:annotation>
-								<xs:documentation>Уникальный идентификатор родительского объекта (улицы, города, населенного пункта и т.п.)</xs:documentation>
+								<xs:documentation>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р° (СѓР»РёС†С‹, РіРѕСЂРѕРґР°, РЅР°СЃРµР»РµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р° Рё С‚.Рї.)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -127,19 +129,19 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="STARTDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="STARTDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Начало действия записи</xs:documentation>
+								<xs:documentation>РќР°С‡Р°Р»Рѕ РґРµР№СЃС‚РІРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="ENDDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="ENDDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Окончание действия записи</xs:documentation>
+								<xs:documentation>РћРєРѕРЅС‡Р°РЅРёРµ РґРµР№СЃС‚РІРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
 						<xs:attribute name="NORMDOC" use="optional">
 							<xs:annotation>
-								<xs:documentation>Внешний ключ на нормативный документ</xs:documentation>
+								<xs:documentation>Р’РЅРµС€РЅРёР№ РєР»СЋС‡ РЅР° РЅРѕСЂРјР°С‚РёРІРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">

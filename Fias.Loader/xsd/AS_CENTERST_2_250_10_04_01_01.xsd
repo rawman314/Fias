@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="windows-1251"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="CenterStatuses">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией по статусу центра в БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ СЃС‚Р°С‚СѓСЃСѓ С†РµРЅС‚СЂР° РІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="CenterStatus" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Статус центра</xs:documentation>
+						<xs:documentation>РЎС‚Р°С‚СѓСЃ С†РµРЅС‚СЂР°</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="CENTERSTID" use="required">
 							<xs:annotation>
-								<xs:documentation>Идентификатор статуса</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚Р°С‚СѓСЃР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -23,7 +23,7 @@
 						</xs:attribute>
 						<xs:attribute name="NAME" use="required">
 							<xs:annotation>
-								<xs:documentation>Наименование</xs:documentation>
+								<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">

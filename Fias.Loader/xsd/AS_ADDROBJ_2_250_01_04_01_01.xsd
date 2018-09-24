@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="windows-1251"?>
-<!-- edited with XMLSpy v2007 sp2 (http://www.altova.com) by ЛАПШИН (GNIVC FNS RF) -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Р‘СѓСЂР°РІС†РµРІ_Рђ (EMBRACE) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:usch="http://www.unisoftware.ru/schematron-extensions" xmlns:sql="urn:schemas-microsoft-com:mapping-schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="AddressObjects">
 		<xs:annotation>
-			<xs:documentation>Состав и структура файла с информацией классификатора адресообразующих элементов БД ФИАС</xs:documentation>
+			<xs:documentation>РЎРѕСЃС‚Р°РІ Рё СЃС‚СЂСѓРєС‚СѓСЂР° С„Р°Р№Р»Р° СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° Р°РґСЂРµСЃРѕРѕР±СЂР°Р·СѓСЋС‰РёС… СЌР»РµРјРµРЅС‚РѕРІ Р‘Р” Р¤РРђРЎ</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Object" maxOccurs="unbounded">
 					<xs:annotation>
-						<xs:documentation>Классификатор адресообразующих элементов</xs:documentation>
+						<xs:documentation>РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРѕР±СЂР°Р·СѓСЋС‰РёС… СЌР»РµРјРµРЅС‚РѕРІ</xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
 						<xs:attribute name="AOGUID" use="required">
 							<xs:annotation>
-								<xs:documentation>Глобальный уникальный идентификатор адресного объекта </xs:documentation>
+								<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -24,7 +24,7 @@
 						</xs:attribute>
 						<xs:attribute name="FORMALNAME" use="required">
 							<xs:annotation>
-								<xs:documentation>Формализованное наименование</xs:documentation>
+								<xs:documentation>Р¤РѕСЂРјР°Р»РёР·РѕРІР°РЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -35,7 +35,7 @@
 						</xs:attribute>
 						<xs:attribute name="REGIONCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код региона</xs:documentation>
+								<xs:documentation>РљРѕРґ СЂРµРіРёРѕРЅР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -45,7 +45,7 @@
 						</xs:attribute>
 						<xs:attribute name="AUTOCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код автономии</xs:documentation>
+								<xs:documentation>РљРѕРґ Р°РІС‚РѕРЅРѕРјРёРё</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -55,7 +55,7 @@
 						</xs:attribute>
 						<xs:attribute name="AREACODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код района</xs:documentation>
+								<xs:documentation>РљРѕРґ СЂР°Р№РѕРЅР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -65,7 +65,7 @@
 						</xs:attribute>
 						<xs:attribute name="CITYCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код города</xs:documentation>
+								<xs:documentation>РљРѕРґ РіРѕСЂРѕРґР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -75,7 +75,7 @@
 						</xs:attribute>
 						<xs:attribute name="CTARCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код внутригородского района</xs:documentation>
+								<xs:documentation>РљРѕРґ РІРЅСѓС‚СЂРёРіРѕСЂРѕРґСЃРєРѕРіРѕ СЂР°Р№РѕРЅР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -85,7 +85,7 @@
 						</xs:attribute>
 						<xs:attribute name="PLACECODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код населенного пункта</xs:documentation>
+								<xs:documentation>РљРѕРґ РЅР°СЃРµР»РµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -93,9 +93,19 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="PLANCODE" use="required">
+							<xs:annotation>
+								<xs:documentation>РљРѕРґ СЌР»РµРјРµРЅС‚Р° РїР»Р°РЅРёСЂРѕРІРѕС‡РЅРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:length value="4"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>									
 						<xs:attribute name="STREETCODE" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код улицы</xs:documentation>
+								<xs:documentation>РљРѕРґ СѓР»РёС†С‹</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -105,7 +115,7 @@
 						</xs:attribute>
 						<xs:attribute name="EXTRCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код дополнительного адресообразующего элемента</xs:documentation>
+								<xs:documentation>РљРѕРґ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ Р°РґСЂРµСЃРѕРѕР±СЂР°Р·СѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -115,7 +125,7 @@
 						</xs:attribute>
 						<xs:attribute name="SEXTCODE" use="required">
 							<xs:annotation>
-								<xs:documentation>Код подчиненного дополнительного адресообразующего элемента</xs:documentation>
+								<xs:documentation>РљРѕРґ РїРѕРґС‡РёРЅРµРЅРЅРѕРіРѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ Р°РґСЂРµСЃРѕРѕР±СЂР°Р·СѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -125,7 +135,7 @@
 						</xs:attribute>
 						<xs:attribute name="OFFNAME" use="optional">
 							<xs:annotation>
-								<xs:documentation>Официальное наименование</xs:documentation>
+								<xs:documentation>РћС„РёС†РёР°Р»СЊРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -136,7 +146,7 @@
 						</xs:attribute>
 						<xs:attribute name="POSTALCODE" use="optional">
 							<xs:annotation>
-								<xs:documentation>Почтовый индекс</xs:documentation>
+								<xs:documentation>РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -146,7 +156,7 @@
 						</xs:attribute>
 						<xs:attribute name="IFNSFL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код ИФНС ФЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ РР¤РќРЎ Р¤Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -156,7 +166,7 @@
 						</xs:attribute>
 						<xs:attribute name="TERRIFNSFL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код территориального участка ИФНС ФЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅРѕРіРѕ СѓС‡Р°СЃС‚РєР° РР¤РќРЎ Р¤Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -166,7 +176,7 @@
 						</xs:attribute>
 						<xs:attribute name="IFNSUL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код ИФНС ЮЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ РР¤РќРЎ Р®Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -176,7 +186,7 @@
 						</xs:attribute>
 						<xs:attribute name="TERRIFNSUL" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код территориального участка ИФНС ЮЛ</xs:documentation>
+								<xs:documentation>РљРѕРґ С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅРѕРіРѕ СѓС‡Р°СЃС‚РєР° РР¤РќРЎ Р®Р›</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -200,18 +210,19 @@
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:length value="8"/>
+									<xs:minLength value="8"/>
+									<xs:maxLength value="11"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="UPDATEDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="UPDATEDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Дата  внесения записи</xs:documentation>
+								<xs:documentation>Р”Р°С‚Р°  РІРЅРµСЃРµРЅРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
 						<xs:attribute name="SHORTNAME" use="required">
 							<xs:annotation>
-								<xs:documentation>Краткое наименование типа объекта</xs:documentation>
+								<xs:documentation>РљСЂР°С‚РєРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РёРїР° РѕР±СЉРµРєС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -222,7 +233,7 @@
 						</xs:attribute>
 						<xs:attribute name="AOLEVEL" use="required">
 							<xs:annotation>
-								<xs:documentation>Уровень адресного объекта </xs:documentation>
+								<xs:documentation>РЈСЂРѕРІРµРЅСЊ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -232,7 +243,7 @@
 						</xs:attribute>
 						<xs:attribute name="PARENTGUID" use="optional">
 							<xs:annotation>
-								<xs:documentation>Идентификатор объекта родительского объекта</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЉРµРєС‚Р° СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РѕР±СЉРµРєС‚Р°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -242,7 +253,7 @@
 						</xs:attribute>
 						<xs:attribute name="AOID" use="required">
 							<xs:annotation>
-								<xs:documentation>Уникальный идентификатор записи. Ключевое поле.</xs:documentation>
+								<xs:documentation>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё. РљР»СЋС‡РµРІРѕРµ РїРѕР»Рµ.</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -252,7 +263,7 @@
 						</xs:attribute>
 						<xs:attribute name="PREVID" use="optional">
 							<xs:annotation>
-								<xs:documentation>Идентификатор записи связывания с предыдушей исторической записью</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё СЃРІСЏР·С‹РІР°РЅРёСЏ СЃ РїСЂРµРґС‹РґСѓС€РµР№ РёСЃС‚РѕСЂРёС‡РµСЃРєРѕР№ Р·Р°РїРёСЃСЊСЋ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -262,7 +273,7 @@
 						</xs:attribute>
 						<xs:attribute name="NEXTID" use="optional">
 							<xs:annotation>
-								<xs:documentation>Идентификатор записи  связывания с последующей исторической записью</xs:documentation>
+								<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё  СЃРІСЏР·С‹РІР°РЅРёСЏ СЃ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РёСЃС‚РѕСЂРёС‡РµСЃРєРѕР№ Р·Р°РїРёСЃСЊСЋ</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -272,29 +283,31 @@
 						</xs:attribute>
 						<xs:attribute name="CODE" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код адресного объекта одной строкой с признаком актуальности из КЛАДР 4.0. </xs:documentation>
+								<xs:documentation>РљРѕРґ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РѕРґРЅРѕР№ СЃС‚СЂРѕРєРѕР№ СЃ РїСЂРёР·РЅР°РєРѕРј Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РёР· РљР›РђР”Р  4.0. </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:length value="17"/>
+									<xs:minLength value="0"/>
+									<xs:maxLength value="17"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="PLAINCODE" use="optional">
 							<xs:annotation>
-								<xs:documentation>Код адресного объекта из КЛАДР 4.0 одной строкой без признака актуальности (последних двух цифр)</xs:documentation>
+								<xs:documentation>РљРѕРґ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РёР· РљР›РђР”Р  4.0 РѕРґРЅРѕР№ СЃС‚СЂРѕРєРѕР№ Р±РµР· РїСЂРёР·РЅР°РєР° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё (РїРѕСЃР»РµРґРЅРёС… РґРІСѓС… С†РёС„СЂ)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
-									<xs:length value="15"/>
+									<xs:minLength value="0"/>
+									<xs:maxLength value="15"/>
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
 						<xs:attribute name="ACTSTATUS" use="required">
 							<xs:annotation>
-								<xs:documentation>Статус актуальности адресного объекта ФИАС. Актуальный адрес на текущую дату. Обычно последняя запись об адресном объекте.
-0 – Не актуальный
-1 - Актуальный
+								<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° Р¤РРђРЎ. РђРєС‚СѓР°Р»СЊРЅС‹Р№ Р°РґСЂРµСЃ РЅР° С‚РµРєСѓС‰СѓСЋ РґР°С‚Сѓ. РћР±С‹С‡РЅРѕ РїРѕСЃР»РµРґРЅСЏСЏ Р·Р°РїРёСЃСЊ РѕР± Р°РґСЂРµСЃРЅРѕРј РѕР±СЉРµРєС‚Рµ.
+0 вЂ“ РќРµ Р°РєС‚СѓР°Р»СЊРЅС‹Р№
+1 - РђРєС‚СѓР°Р»СЊРЅС‹Р№
 </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
@@ -305,7 +318,7 @@
 						</xs:attribute>
 						<xs:attribute name="CENTSTATUS" use="required">
 							<xs:annotation>
-								<xs:documentation>Статус центра</xs:documentation>
+								<xs:documentation>РЎС‚Р°С‚СѓСЃ С†РµРЅС‚СЂР°</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -315,21 +328,21 @@
 						</xs:attribute>
 						<xs:attribute name="OPERSTATUS" use="required">
 							<xs:annotation>
-								<xs:documentation>Статус действия над записью – причина появления записи (см. описание таблицы OperationStatus):
-01 – Инициация;
-10 – Добавление;
-20 – Изменение;
-21 – Групповое изменение;
-30 – Удаление;
-31 - Удаление вследствие удаления вышестоящего объекта;
-40 – Присоединение адресного объекта (слияние);
-41 – Переподчинение вследствие слияния вышестоящего объекта;
-42 - Прекращение существования вследствие присоединения к другому адресному объекту;
-43 - Создание нового адресного объекта в результате слияния адресных объектов;
-50 – Переподчинение;
-51 – Переподчинение вследствие переподчинения вышестоящего объекта;
-60 – Прекращение существования вследствие дробления;
-61 – Создание нового адресного объекта в результате дробления
+								<xs:documentation>РЎС‚Р°С‚СѓСЃ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ Р·Р°РїРёСЃСЊСЋ вЂ“ РїСЂРёС‡РёРЅР° РїРѕСЏРІР»РµРЅРёСЏ Р·Р°РїРёСЃРё (СЃРј. РѕРїРёСЃР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ OperationStatus):
+01 вЂ“ РРЅРёС†РёР°С†РёСЏ;
+10 вЂ“ Р”РѕР±Р°РІР»РµРЅРёРµ;
+20 вЂ“ РР·РјРµРЅРµРЅРёРµ;
+21 вЂ“ Р“СЂСѓРїРїРѕРІРѕРµ РёР·РјРµРЅРµРЅРёРµ;
+30 вЂ“ РЈРґР°Р»РµРЅРёРµ;
+31 - РЈРґР°Р»РµРЅРёРµ РІСЃР»РµРґСЃС‚РІРёРµ СѓРґР°Р»РµРЅРёСЏ РІС‹С€РµСЃС‚РѕСЏС‰РµРіРѕ РѕР±СЉРµРєС‚Р°;
+40 вЂ“ РџСЂРёСЃРѕРµРґРёРЅРµРЅРёРµ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° (СЃР»РёСЏРЅРёРµ);
+41 вЂ“ РџРµСЂРµРїРѕРґС‡РёРЅРµРЅРёРµ РІСЃР»РµРґСЃС‚РІРёРµ СЃР»РёСЏРЅРёСЏ РІС‹С€РµСЃС‚РѕСЏС‰РµРіРѕ РѕР±СЉРµРєС‚Р°;
+42 - РџСЂРµРєСЂР°С‰РµРЅРёРµ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РІСЃР»РµРґСЃС‚РІРёРµ РїСЂРёСЃРѕРµРґРёРЅРµРЅРёСЏ Рє РґСЂСѓРіРѕРјСѓ Р°РґСЂРµСЃРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ;
+43 - РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ СЃР»РёСЏРЅРёСЏ Р°РґСЂРµСЃРЅС‹С… РѕР±СЉРµРєС‚РѕРІ;
+50 вЂ“ РџРµСЂРµРїРѕРґС‡РёРЅРµРЅРёРµ;
+51 вЂ“ РџРµСЂРµРїРѕРґС‡РёРЅРµРЅРёРµ РІСЃР»РµРґСЃС‚РІРёРµ РїРµСЂРµРїРѕРґС‡РёРЅРµРЅРёСЏ РІС‹С€РµСЃС‚РѕСЏС‰РµРіРѕ РѕР±СЉРµРєС‚Р°;
+60 вЂ“ РџСЂРµРєСЂР°С‰РµРЅРёРµ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ РІСЃР»РµРґСЃС‚РІРёРµ РґСЂРѕР±Р»РµРЅРёСЏ;
+61 вЂ“ РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РґСЂРѕР±Р»РµРЅРёСЏ
 </xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
@@ -340,7 +353,7 @@
 						</xs:attribute>
 						<xs:attribute name="CURRSTATUS" use="required">
 							<xs:annotation>
-								<xs:documentation>Статус актуальности КЛАДР 4 (последние две цифры в коде)</xs:documentation>
+								<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РљР›РђР”Р  4 (РїРѕСЃР»РµРґРЅРёРµ РґРІРµ С†РёС„СЂС‹ РІ РєРѕРґРµ)</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:integer">
@@ -348,19 +361,19 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
-						<xs:attribute name="STARTDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="STARTDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Начало действия записи</xs:documentation>
+								<xs:documentation>РќР°С‡Р°Р»Рѕ РґРµР№СЃС‚РІРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
-						<xs:attribute name="ENDDATE" type="xs:dateTime" use="required">
+						<xs:attribute name="ENDDATE" type="xs:date" use="required">
 							<xs:annotation>
-								<xs:documentation>Окончание действия записи</xs:documentation>
+								<xs:documentation>РћРєРѕРЅС‡Р°РЅРёРµ РґРµР№СЃС‚РІРёСЏ Р·Р°РїРёСЃРё</xs:documentation>
 							</xs:annotation>
 						</xs:attribute>
 						<xs:attribute name="NORMDOC" use="optional">
 							<xs:annotation>
-								<xs:documentation>Внешний ключ на нормативный документ</xs:documentation>
+								<xs:documentation>Р’РЅРµС€РЅРёР№ РєР»СЋС‡ РЅР° РЅРѕСЂРјР°С‚РёРІРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚</xs:documentation>
 							</xs:annotation>
 							<xs:simpleType>
 								<xs:restriction base="xs:string">
@@ -368,6 +381,34 @@
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
+						<xs:attribute name="LIVESTATUS" use="required">
+							<xs:annotation>
+								<xs:documentation>РџСЂРёР·РЅР°Рє РґРµР№СЃС‚РІСѓСЋС‰РµРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:byte">
+									<xs:enumeration value="0"/>
+									<xs:enumeration value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+            <xs:attribute name="DIVTYPE" use="required">
+              <xs:annotation>
+                <xs:documentation>
+                  РўРёРї Р°РґСЂРµСЃР°С†РёРё:
+                  0 - РЅРµ РѕРїСЂРµРґРµР»РµРЅРѕ
+                  1 - РјСѓРЅРёС†РёРїР°Р»СЊРЅС‹Р№;
+                  2 - Р°РґРјРёРЅРёСЃС‚СЂР°С‚РёРІРЅРѕ-С‚РµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅС‹Р№
+                </xs:documentation>
+              </xs:annotation>
+              <xs:simpleType>
+                <xs:restriction base="xs:int">
+                  <xs:enumeration value="0"/>
+                  <xs:enumeration value="1"/>
+                  <xs:enumeration value="2"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
